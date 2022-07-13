@@ -31,13 +31,25 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-//    let pilotStatus = document.getElementByID ('pilotStatus');
-//    let copilotStatus = document.getElementByID ('copilotStatus');
-//    let fuelStatus = document.getElementById('fuelStatus');
-//    let cargoStatus = document.getElementById('cargoStatus');
-//    let newLaunchStatus = document.getElementById('launchStatus');
-//    let listStatus = document.getElementById('faultyItems');
-//    console.log(pilot);
+    let form = this.document.querySelector("form");
+    form.addEventListener("submit", function(event){
+ 
+        let pilotName = document.querySelector("input[name=pilotName]");
+        let copilotName = document.querySelector("input[name=copilotName]");
+        let fuelLevel = document.querySelector("input[name=fuelLevel]");
+        let cargoMass = document.querySelector("input[name=cargoMass]");
+    
+        let faultyItems = document.getElementById("faultyItems");
+    
+        let pilotNameValue = pilotName.value;
+        let copilotNameValue = copilotName.value;
+        let fuelLevelValue = fuelLevel.value;
+        let cargoMassValue = cargoMass.value;
+    
+        
+        formSubmission(document,faultyItems,pilotNameValue,copilotNameValue,fuelLevelValue,cargoMassValue)
+        event.preventDefault();
+       })
 
    
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields

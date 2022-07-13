@@ -20,23 +20,4 @@ window.addEventListener("load", function() {
     })
  
  
-    let form = this.document.querySelector("form");
-    form.addEventListener("submit", function(event){
- 
-     let pilotName = document.querySelector("input[name=pilotName]");
-     let copilotName = document.querySelector("input[name=copilotName]");
-     let fuelLevel = document.querySelector("input[name=fuelLevel]");
-     let cargoMass = document.querySelector("input[name=cargoMass]");
- 
-     let faultyItems = document.getElementById("faultyItems");
- 
-     let pilotNameValue = pilotName.value;
-     let copilotNameValue = copilotName.value;
-     let fuelLevelValue = fuelLevel.value;
-     let cargoMassValue = cargoMass.value;
- 
-     
-     formSubmission(document,faultyItems,pilotNameValue,copilotNameValue,fuelLevelValue,cargoMassValue)
-     event.preventDefault();
-    })
 });
