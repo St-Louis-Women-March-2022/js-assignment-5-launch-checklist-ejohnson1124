@@ -5,6 +5,7 @@ const { myFetch } = require("./scriptHelper");
 window.addEventListener("load", function() {
     //add form and button elements as page wasn't working and include prevent even
     let form = document.querySelector("form");
+    
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         let pilotName = document.querySelector("input[name=pilotName]");
