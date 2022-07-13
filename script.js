@@ -3,7 +3,7 @@
 const { myFetch } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
-   
+    formSubmission(document);
     let listedPlanets;
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
     let listedPlanetsResponse = myFetch();
