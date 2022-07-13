@@ -15,7 +15,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
             <img src="${imageUrl}"> `
 }
    
-
+//hould take in a string as a parameter and return "Empty", "Not a Number", or "Is a Number"
 function validateInput(testInput) {
     if (testInput === "") {
         return "Empty";
@@ -35,18 +35,17 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let newLaunchStatus = document.getElementById('launchStatus');
    let listNew = document.getElementById('faultyItems');
    
-
-   //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
+//add an alert to notify the user that all fields are required. entered valid info for each of the fields
    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-    console.log("All field are required!");
+    alert ("All field are required!");
     
    }else if (validateInput(pilot)!== "is a Number" || validateInput(copilot) !== "is a Number") {
-        console.log ("Name required");
+    alert ("Name required");
     }
     else if (validateInput(fuelLevel) !== "is not a Number" || validateInput(cargoMass) !== "is not a Number") {
-        console.log ("Number required");
+        alert ("Number required");
     }
-    
+       //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
     else{
         list.style.visible = 'visible';
         pilotStatus.innerHTML = `Pilot ${pilot} Ready`;
