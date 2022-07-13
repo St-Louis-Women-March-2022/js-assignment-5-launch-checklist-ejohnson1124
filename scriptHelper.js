@@ -42,10 +42,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    if (validateInput(pilotName) === "Empty" || validateInput(copilotName) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
     alert ("All fields are required!");
     
-   }else if (validateInput(pilotName)!== "Is a Number" || validateInput(copilotName) !== "Is a Number") {
+   }else if (validateInput(pilotName) == "Is a Number" || validateInput(copilotName) == "Is a Number") {
     alert ("Name required");
     }
-    else if (validateInput(fuelLevel) !== "Not a Number" || validateInput(cargoMass) !== "Not a Number") {
+    else if (validateInput(fuelLevel) == "Not a Number" || validateInput(cargoMass) == "Not a Number") {
         alert ("Number required");
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
