@@ -33,7 +33,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let fuelStatus = document.getElementById('fuelStatus');
    let cargoStatus = document.getElementById('cargoStatus');
    let newLaunchStatus = document.getElementById('launchStatus');
-   let list = document.getElementById('faultyItems');
+   let listStatus = document.getElementById('faultyItems');
    console.log(pilot);
 
    
@@ -49,7 +49,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
     else{
-        list.style.visible = 'visible';
+        listStatus.style.visible = 'visible';
         pilotStatus.innerHTML = `Pilot ${pilot} Ready`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} Ready`;
     
