@@ -38,13 +38,13 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let cargoStatus = document.getElementById("cargoStatus");
    
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
-   if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
+   if (validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoLevel.value) === "Empty") {
     alert ("All fields are required!");
     
-   }else if (validateInput(pilot) == "Is a Number" || validateInput(copilot) == "Is a Number") {
+   }else if (validateInput(pilot.value) == "Is a Number" || validateInput(copilot.value) == "Is a Number") {
     alert ("Name required");
     }
-    else if (validateInput(fuelLevel) == "Not a Number" || validateInput(cargoMass) == "Not a Number") {
+    else if (validateInput(fuelLevel.value) == "Not a Number" || validateInput(cargoMass.value) == "Not a Number") {
         alert ("Number required");
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
