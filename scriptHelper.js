@@ -32,7 +32,7 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let form = this.document.querySelector("form");
-    let faultyItems = document.getElementById("faultyItems");
+    let button = document.getElementById("formSubmit")
 
     form.addEventListener("submit", function(event){
  
@@ -46,7 +46,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         let fuelLevelValue = fuelLevel.value;
         let cargoMassValue = cargoMass.value;
     
-        
+        let faultyItems = document.getElementById("faultyItems");
+
         formSubmission(document,faultyItems,pilotNameValue,copilotNameValue,fuelLevelValue,cargoMassValue)
         event.preventDefault();
        })
@@ -64,8 +65,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
     else{
-        document.getElementById(pilotStatus).innerHTML = `Pilot ${pilot} Ready`;
-        document.getElementById(copilotStatus).innerHTML = `Co-pilot ${copilot} Ready`;
+        document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} Ready`;
+        document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} Ready`;
     
 
         if (fuelLevel < 10000){
