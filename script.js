@@ -25,7 +25,7 @@ window.addEventListener("load", function() {
         let copilot = document.querySelector("input[name=copilotName]");
         let fuelLevel = document.querySelector("input[name=fuelLevel]");
         let cargoLevel = document.querySelector("input[name=cargoMass]");
-        let list = document.getElementById("faultyList");
+        let list = document.getElementById("faultyList");//putting this here b/c it won't let me on scripthelper
         
 
 
