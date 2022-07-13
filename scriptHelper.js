@@ -31,12 +31,12 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    // let launchStatus = document.getElementById("launchStatus");
-    // let faultyItems = document.getElementById("faultyItems"); //had to make list 'faultyItems due to autograder
-    // let pilotStatus = document.getElementById("pilotStatus");
-    // let copilotStatus = document.getElementById( "copilotStatus");
-    // let fuelStatus = document.getElementById("fuelStatus");
-    // let cargoStatus = document.getElementById("cargoStatus");
+    let launchStatus = document.getElementById("launchStatus");
+    let faultyItems = document.getElementById("faultyItems"); //had to make list 'faultyItems due to autograder
+    let pilotStatus = document.getElementById("pilotStatus");
+    let copilotStatus = document.getElementById( "copilotStatus");
+    let fuelStatus = document.getElementById("fuelStatus");
+    let cargoStatus = document.getElementById("cargoStatus");
    
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
    if (validateInput(pilotName) === "Empty" || validateInput(copilotName) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
