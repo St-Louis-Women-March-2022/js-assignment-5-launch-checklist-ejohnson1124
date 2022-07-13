@@ -48,34 +48,34 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         alert ("Number required");
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
-    else{
-        pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
-        copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
-    
-
-        if (fuelLevel < 10000){
-            list.style.visibility = "visible";
-            fuelStatus.innerHTML = "Fuel level too low for launch.";
-            launchStatus.innerHTML = "Shuttle not ready for launch";
-            launchStatus.style.color = "red";
-        }
-
-        else if (cargoLevel > 10000){
-            list.style.visibility = "visible";
-            cargoStatus.innerHTML = "Too much mass for the shuttle to take off";
-            launchStatus.innerHTML = "Shuttle not ready for launch";
-            launchStatus.style.color = "red";
-        }     
-
-        else  { 
-            list.style.visibility = "visible";
-            fuelStatus.innerHTML = "Fuel level high enough for launch";
-            cargoStatus.innerHTML = "Cargo mass low enough for launch";
-            launchStatus.style.color = "green";
-            launchStatus.innerHTML = "Shuttle is ready for launch";
-        }
-    }
-}
+    //else{
+    //     pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
+    //     copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
+    // }
+        if 
+        (fuelLevel < 10000) {
+            launchStatus.innerHTML = "Shuttle Not Ready For Launch"
+            fuelStatus.innerHTML = "Fuel level too low for launch"
+            pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`
+            copilotStatus.innerHTML = `Co-Pilot ${copilot} is ready for launch`
+            launchStatus.style.color = "red"
+            list.style.visibility = "visible"
+        } else if (cargoLevel > 10000) {
+            launchStatus.innerHTML = "Shuttle Not Ready For Launch"
+            cargoStatus.innerHTML = "Cargo mass too high for launch"
+            pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`
+            copilotStatus.innerHTML = `Co-Pilot ${copilot} is ready for launch`
+            launchStatus.style.color = "red"
+            list.style.visibility = "visible"
+        } else {
+            launchStatus.innerHTML = "Shuttle Is Ready For Launch"
+            launchStatus.style.color = "green"
+            pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`
+            copilotStatus.innerHTML = `Co-Pilot ${copilot} is ready for launch`
+            fuelStatus.innerHTML = "Fuel level high enough for launch"
+            cargoStatus.innerHTML = "Cargo mass low enough for launch"     
+        }        
+    };
 
 async function myFetch() {
     let planetsReturned;
