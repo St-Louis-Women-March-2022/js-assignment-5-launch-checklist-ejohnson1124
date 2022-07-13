@@ -83,7 +83,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
 async function myFetch() {
     let planetsReturned;
-
+//add the URL and return response.json().
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
         return response.json();       
 });
@@ -92,6 +92,7 @@ async function myFetch() {
 }
 
 function pickPlanet(planets) {
+    // Using Math.random(), return one planet from the list with a randomly-selected index.
     let planetIndex = Math.floor(Math.random()* planets.length);
         return planets[planetIndex];
         

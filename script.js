@@ -3,7 +3,25 @@
 const { myFetch } = require("./scriptHelper");
 
 window.addEventListener("load", function() {
-    
+    //add form and button elements as page wasn't working and include prevent even
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let pilotName = document.querySelector("input[name=pilotName]");
+        let pilotValue = pilotName.value;
+        let copilotName = document.querySelector("input[name=copilotName]");
+        let copilotValue = copilotName.value;
+        let fuelLevel = document.querySelector("input[name=fuelLevel]");
+        let fuelLevelValue = fuelLevel.value;
+        let cargoMass = document.querySelector("input[name=cargoMass]");
+        let cargoMassValue = cargoMass.value;
+        
+        formSubmission(document,pilotValue,copilotValue,fuelLevelValue,cargoMassValue);
+        
+
+    });
+
+
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
    let listedPlanetsResponse = myFetch();
