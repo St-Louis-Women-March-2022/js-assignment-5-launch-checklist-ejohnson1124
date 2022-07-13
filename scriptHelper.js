@@ -34,7 +34,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let cargoStatus = document.getElementById('cargoStatus');
    let newLaunchStatus = document.getElementById('launchStatus');
    let list = document.getElementById('faultyItems');
-   let button = document.getElementById("formSubmit");
    
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
