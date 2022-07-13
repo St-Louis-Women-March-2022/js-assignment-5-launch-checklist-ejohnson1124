@@ -18,14 +18,13 @@ window.addEventListener("load", function() {
      //    function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl)
     })
  //25.9.3. Follow Along as We Add Validation adding validations
-    let form = document.querySelector("launchForm");
+    let form = document.querySelector("form");
     form.addEventListener("submit", function(event){
-        let button = document.querySelector("formSubmit");//needed due to nothing happening when clicked
 
-        let pilotName = document.querySelector("input[name=pilotName]").value;
-        let copilotName = document.querySelector("input[name=copilotName]").value;
-        let fuelLevel = document.querySelector("input[name=fuelLevel]").value;
-        let cargoMass = document.querySelector("input[name=cargoMass]").value;
+        let pilot = document.querySelector("input[name=pilotName]");
+        let copilot = document.querySelector("input[name=copilotName]");
+        let fuelLevel = document.querySelector("input[name=fuelLevel]");
+        let cargoLevel = document.querySelector("input[name=cargoMass]");
         let list = document.getElementById("faultyList");
         
 
