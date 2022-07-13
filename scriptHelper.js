@@ -40,7 +40,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
     console.log("All field are required!");
     
-    else if (validateInput(pilot)!== "is a Number" || validateInput(copilot) !== "is a Number") {
+   }else if (validateInput(pilot)!== "is a Number" || validateInput(copilot) !== "is a Number") {
         console.log ("Name required");
     }
     else if (validateInput(fuelLevel) !== "is not a Number" || validateInput(cargoMass) !== "is not a Number") {
