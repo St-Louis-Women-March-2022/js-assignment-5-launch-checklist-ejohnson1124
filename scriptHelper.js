@@ -6,13 +6,13 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
             let updatedMissionTarget = document.getElementById('missionTarget')
             updatedMissionTarget.innerHTML = `
                 <ol>
-                <li>Name: ${selectedPlanet.name} </li>
-                <li>Diameter: ${selectedPlanet.diameter} </li>
-                <li>Star: ${selectedPlanet.star}</li>
-                <li>Distance from Earth: ${selectedPlanet.distance} </li>
-                <li>Number of Moons: ${selectedPlanet.moons} </li>
+                <li>Name: ${name} </li>
+                <li>Diameter: ${diameter} </li>
+                <li>Star: ${star}</li>
+                <li>Distance from Earth: ${distance} </li>
+                <li>Number of Moons: ${moons} </li>
             </ol>
-            <img src="${selectedPlanet.image}"> `
+            <img src="${imageUrl}"> `
 }
    
 
@@ -32,10 +32,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let copilotStatus = document.getElementByID ('copilotStatus');
    let fuelStatus = document.getElementById('fuelStatus');
    let cargoStatus = document.getElementById('cargoStatus');
-   let newLaunchStatus = document.getElementById("launchStatus");
-   let list = document.getElementById("faultyItems");
-   // fuelLevel = Number(fuelLevel);
-   // cargoMass = Number(cargoMass);
+   let newLaunchStatus = document.getElementById('launchStatus');
+   let listNew = document.getElementById('faultyItems');
+   
 
    //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
