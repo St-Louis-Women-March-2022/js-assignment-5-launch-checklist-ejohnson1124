@@ -18,5 +18,23 @@ window.addEventListener("load", function() {
      //    function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl)
     })
  
- 
+    let form = this.document.querySelector("form");
+    form.addEventListener("submit", function(event){
+        let button = document.querySelector("#formSubmit");
+
+        let pilotName = document.querySelector("input[name=pilotName]");
+        let copilotName = document.querySelector("input[name=copilotName]");
+        let fuelLevel = document.querySelector("input[name=fuelLevel]");
+        let cargoMass = document.querySelector("input[name=cargoMass]");
+        
+        let pilotNameValue = pilotName.value;
+        let copilotNameValue = copilotName.value;
+        let fuelLevelValue = fuelLevel.value;
+        let cargoMassValue = cargoMass.value;
+    
+        let faultyItems = document.getElementById("faultyItems");
+
+        formSubmission(document,faultyItems,pilotNameValue,copilotNameValue,fuelLevelValue,cargoMassValue)
+        event.preventDefault();
+       })
 });
