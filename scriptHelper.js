@@ -25,7 +25,7 @@ function validateInput(testInput) {
         return "Is a Number";
     
 };
-}
+
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let pilotStatus = document.getElementByID ('pilotStatus');
