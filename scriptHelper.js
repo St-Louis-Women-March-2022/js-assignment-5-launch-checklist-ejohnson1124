@@ -85,14 +85,15 @@ async function myFetch() {
     let planetsReturned;
 
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-        });
+        return response.json();       
+});
 
     return planetsReturned;
 }
 
 function pickPlanet(planets) {
-    let planet = Math.floor(Math.random()* planets.length)
-        return planets[planet]
+    let planetIndex = Math.floor(Math.random()* planets.length);
+        return planets[planetIndex];
         
 }
 
