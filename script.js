@@ -9,9 +9,9 @@ window.addEventListener("load", function() {
     let listedPlanetsResponse = myFetch();
     listedPlanetsResponse.then(function (result) {
         listedPlanets = result;
-        console.log("the return object is", pickPlanet(listedPlanets));
+        console.log(listedPlanets);
     }).then(function () {
-        console.log("Listed planets is", listedPlanets);
+        console.log(listedPlanets);
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
         let planet = pickPlanet(listedPlanets)
  
