@@ -31,13 +31,13 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   let pilotStatus = document.getElementByID ('pilotStatus');
-   let copilotStatus = document.getElementByID ('copilotStatus');
-   let fuelStatus = document.getElementById('fuelStatus');
-   let cargoStatus = document.getElementById('cargoStatus');
-   let newLaunchStatus = document.getElementById('launchStatus');
-   let listStatus = document.getElementById('faultyItems');
-   console.log(pilot);
+//    let pilotStatus = document.getElementByID ('pilotStatus');
+//    let copilotStatus = document.getElementByID ('copilotStatus');
+//    let fuelStatus = document.getElementById('fuelStatus');
+//    let cargoStatus = document.getElementById('cargoStatus');
+//    let newLaunchStatus = document.getElementById('launchStatus');
+//    let listStatus = document.getElementById('faultyItems');
+//    console.log(pilot);
 
    
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
@@ -52,37 +52,34 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
     else{
-        listStatus.style.visible = 'visible';
-        pilotStatus.innerHTML = `Pilot ${pilot} Ready`;
-        copilotStatus.innerHTML = `Co-pilot ${copilot} Ready`;
+        list.style.visibility = 'visible';
+        document.getElementById(pilotStatus).innerHTML = `Pilot ${pilot} Ready`;
+        document.getElementById(copilotStatus).innerHTML = `Co-pilot ${copilot} Ready`;
     
 
-    if(fuelLevel < 10000 && cargoMass > 10000){
-        newLaunchStatus.innerHTML = "Shuttle not ready for Launch";
-        newLaunchStatus.style.color = "red";
-        fuelStatus.innerHTML = "Not enough fuel for the journey";
-        cargoStatus.innerHTML = "Too much mass for the journey";
-       
-        
-    } else if(fuelLevel < 10000 && cargoMass < 10000){
-        newLaunchStatus.innerHTML = "Shuttle not ready for Launch";
-        newLaunchStatus.style.color = "red";
-        fuelStatus.innerHTML = "Not enough fuel for the journey";
-        cargoStatus.innerHTML = `CargoMass : ${cargoMass}`;
+        if (fuelLevel < 10000){
+            list.style.visibility = "visible";
+            document.getElementById("fuelStatus").innerHTML = "Not enough fuel for the journey";
+            document.getElementById("launchStatus").innerHTML = "Shuttle not ready for launch";
+            document.getElementById("launchStatus").style.color = "red";
+        }else{
+            document.getElementById("fuelStatus").innerHTML = "Fuel level high enough for launch";
+        }
 
-    } else if(fuelLevel > 10000 && cargoMass > 10000){
-        newLaunchStatus.innerHTML = "Shuttle not ready for Launch";
-        newLaunchStatus.style.color = "red";
-        fuelStatus.innerHTML = `Fuel Level : ${fuelLevel}`;
-        cargoStatus.innerHTML = "Too much mass for the journey";
+        if (cargoLevel > 10000){
+            list.style.visibility = "visible";
+            document.getElementById("cargoStatus").innerHTML = "Too much mass for the shuttle to take off";
+            document.getElementById("launchStatus").innerHTML = "Shuttle not ready for launch";
+            document.getElementById("launchStatus").style.color = "red";
+        }else{
+            document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch";
+        }        
 
-    } else if(fuelLevel > 10000 && cargoMass < 10000){
-        newLaunchStatus.innerHTML = "Shuttle ready for Launch";
-        newLaunchStatus.style.color = "green";
-        fuelStatus.innerHTML = `Fuel Level : ${fuelLevel}`;
-        cargoStatus.innerHTML = `CargoMass : ${cargoMass}`;
+        if (fuelLevel >= 10000 && cargoLevel <= 10000) { 
+            document.getElementById("launchStatus").style.color = "green";
+            document.getElementById("launchStatus").innerHTML = "Shuttle is ready for launch";
+        }
     }
-}     
 }
 
 async function myFetch() {
