@@ -54,7 +54,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
    
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
-   if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
+   if (validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoLevel.value) === "Empty") {
     alert ("All fields are required!");
     
    }else if (validateInput(pilot)!== "is a Number" || validateInput(copilot) !== "is a Number") {
