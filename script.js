@@ -18,9 +18,9 @@ window.addEventListener("load", function() {
      //    function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl)
     })
  
-    let form = this.document.querySelector("form");
+    let form = this.document.querySelector("launchForm");
     form.addEventListener("submit", function(event){
-        let button = document.querySelector("#formSubmit");
+        let button = document.querySelector("formSubmit");
 
         let pilotName = document.querySelector("input[name=pilotName]");
         let copilotName = document.querySelector("input[name=copilotName]");
