@@ -17,10 +17,10 @@ window.addEventListener("load", function() {
         addDestinationInfo(document, planet.name, planet.diameter, planet.star, planet.distance, planet.moons, planet.image);
      //    function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl)
     })
- 
+ //25.9.3. Follow Along as We Add Validation adding validations
     let form = document.querySelector("launchForm");
     form.addEventListener("submit", function(event){
-        let button = document.querySelector("formSubmit");
+        let button = document.querySelector("formSubmit");//needed due to nothing happening when clicked
 
         let pilotName = document.querySelector("input[name=pilotName]");
         let copilotName = document.querySelector("input[name=copilotName]");
