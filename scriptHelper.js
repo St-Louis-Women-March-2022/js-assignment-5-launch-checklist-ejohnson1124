@@ -2,16 +2,9 @@
 require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
-        // Here is the HTML formatting for our mission target div.
-
-        fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-            response.json().then( function(jsonArray) {
-                console.log(jsonArray);
-    
-                let selectedPlanet = pickPlanet(jsonArray)
-                
-                let updatedMissionTarget = document.getElementById('missionTarget')
-                updatedMissionTarget.innerHTML = `
+        // Here is the HTML formatting for our mission target div.                
+            let updatedMissionTarget = document.getElementById('missionTarget')
+            updatedMissionTarget.innerHTML = `
                 <ol>
                 <li>Name: ${selectedPlanet.name} </li>
                 <li>Diameter: ${selectedPlanet.diameter} </li>
@@ -19,9 +12,9 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                 <li>Distance from Earth: ${selectedPlanet.distance} </li>
                 <li>Number of Moons: ${selectedPlanet.moons} </li>
             </ol>
-            <img src="${selectedPlanet.image}"> `})
-   
+            <img src="${selectedPlanet.image}"> `
 }
+   
 
 function validateInput(testInput) {
     if (testInput === "") {
