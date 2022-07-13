@@ -32,8 +32,6 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let form = this.document.querySelector("form");
-    let button = document.getElementById("formSubmit")
-
     form.addEventListener("submit", function(event){
  
         let pilotName = document.querySelector("input[name=pilotName]");
