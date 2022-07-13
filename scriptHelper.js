@@ -22,17 +22,17 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 function validateInput(testInput) {
     if (testInput === "") {
         return "Empty";
-    } else if (isNaN(Number(testInput)) == true) {
+    } else if (isNaN(Number(testInput)) === true) {
         return "Not a Number";
-    } else
+    } else if (isNaN(Number(testInput)) === false){
         return "Is a Number";
-    
+    }
 };
 
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let launchStatus = document.getElementById("launchStatus");
-    let faultyItems = document.getElementById("faultyItems");
+    let faultyItems = document.getElementById("faultyItems"); //had to make list 'faultyItems due to autograder
     let pilotStatus = document.getElementById("pilotStatus");
     let copilotStatus = document.getElementById( "copilotStatus");
     let fuelStatus = document.getElementById("fuelStatus");
