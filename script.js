@@ -22,13 +22,16 @@ window.addEventListener("load", function() {
     form.addEventListener("submit", function(event){
         let button = document.querySelector("formSubmit");//needed due to nothing happening when clicked
 
-        let pilotName = document.querySelector("input[name=pilotName]");
-        let copilotName = document.querySelector("input[name=copilotName]");
-        let fuelLevel = document.querySelector("input[name=fuelLevel]");
-        let cargoMass = document.querySelector("input[name=cargoMass]");
+        let pilotName = document.querySelector("input[name=pilotName]").value;
+        let copilotName = document.querySelector("input[name=copilotName]").value;
+        let fuelLevel = document.querySelector("input[name=fuelLevel]").value;
+        let cargoMass = document.querySelector("input[name=cargoMass]").value;
+        let list = document.getElementById("faultyList");
         
 
+
         event.preventDefault();
+        //using this to update list
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
        });
 });
