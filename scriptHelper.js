@@ -38,7 +38,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let cargoStatus = document.getElementById("cargoStatus");
    
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
-   if (validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoLevel.value) === "Empty") {
+   if (validateInput(pilot.value) === "Empty" || validateInput(copilot.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoLevel.value) === "Empty") {
     alert ("All fields are required!");
     
    }else if (validateInput(pilot.value) == "Is a Number" || validateInput(copilot.value) == "Is a Number") {
