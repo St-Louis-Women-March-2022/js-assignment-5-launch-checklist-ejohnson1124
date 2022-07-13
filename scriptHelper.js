@@ -42,7 +42,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-    alert ("All field are required!");
+    alert ("All fields are required!");
     
    }else if (validateInput(pilot)!== "is a Number" || validateInput(copilot) !== "is a Number") {
     alert ("Name required");
@@ -52,7 +52,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
     else{
-        list.style.visibility = 'visible';
         document.getElementById(pilotStatus).innerHTML = `Pilot ${pilot} Ready`;
         document.getElementById(copilotStatus).innerHTML = `Co-pilot ${copilot} Ready`;
     
