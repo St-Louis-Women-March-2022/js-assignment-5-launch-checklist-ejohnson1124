@@ -3,16 +3,19 @@ require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
         // Here is the HTML formatting for our mission target div.                
-            let updatedMissionTarget = document.getElementById('missionTarget')
-            updatedMissionTarget.innerHTML = `
-                <ol>
-                <li>Name: ${name} </li>
-                <li>Diameter: ${diameter} </li>
-                <li>Star: ${star}</li>
-                <li>Distance from Earth: ${distance} </li>
-                <li>Number of Moons: ${moons} </li>
-            </ol>
-            <img src="${imageUrl}"> `
+        let finalMissionDestitnation = document.getElementById("missionTarget");
+        finalMissionDestitnation.innerHTML = `
+         <h2>Mission Destination</h2>
+         <ol>
+             <li>Name: ${name} </li>
+             <li>Diameter: ${diameter}</li>
+             <li>Star: ${star}</li>
+             <li>Distance from Earth: ${distance} </li>
+             <li>Number of Moons: ${moons} </li>
+         </ol>
+         <img src="${imageUrl}">
+         `
+
 }
    
 //hould take in a string as a parameter and return "Empty", "Not a Number", or "Is a Number"
