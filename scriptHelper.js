@@ -66,11 +66,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             // pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
             // copilotStatus.innerHTML = `Co-Pilot ${copilot} is ready for launch`;
             launchStatus.style.color = "red";
-            list.style.visibility = "visible";
+            list.style.visibility = 'visible';
         } else if (fuelLevel.value >= 10000 && cargoLevel.value <= 10000) {
-            list.style.visibility = "visible";
+            list.style.visibility = 'visible';
             launchStatus.innerHTML = "Shuttle Is Ready For Launch";
-            launchStatus.style.color = "green";
+            launchStatus.style.color = 'green';
             // pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
             // copilotStatus.innerHTML = `Co-Pilot ${copilot} is ready for launch`;
             fuelStatus.innerHTML = "Fuel level high enough for launch";
