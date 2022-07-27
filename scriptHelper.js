@@ -58,7 +58,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         copilotStatus.innerHTML = `Co-pilot ${copilot.value} is ready for launch`;
     }
         if (fuelLevel.value < 10000) {
-            launchStatus.innerHTML = `Shuttle Not Ready For Launch`;
+            launchStatus.innerHTML = 'Shuttle Not Ready For Launch';
             fuelStatus.innerHTML = `Fuel level too low for launch`;
             // pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
             // copilotStatus.innerHTML = `Co-Pilot ${copilot} is ready for launch`;
