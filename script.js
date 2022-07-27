@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
         let cargoLevel = document.querySelector("input[name=cargoMass]");
         let list = document.getElementById("faultyItems");//putting this here b/c it won't let me on scripthelper
         
-
+//Returns the first element that matches the given CSS selector.
 
         //using this to update list
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);

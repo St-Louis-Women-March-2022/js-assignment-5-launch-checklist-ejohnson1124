@@ -36,6 +36,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuelStatus = document.getElementById('fuelStatus');
     let cargoStatus = document.getElementById('cargoStatus');
     let launchStatus = document.getElementById('launchStatus');
+//ocument.getElementById will search for a matching element and return a reference to it
 
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
    if (validateInput(pilot.value) === "Empty" || validateInput(copilot.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoLevel.value) === "Empty") {
@@ -56,6 +57,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     else{
         pilotStatus.innerHTML = `Pilot ${pilot.value} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot.value} is ready for launch`;
+        //innerhtml reads and updates the contents of the element
     }
         if (fuelLevel.value < 10000) {
             launchStatus.innerHTML = 'Shuttle Not Ready For Launch';
