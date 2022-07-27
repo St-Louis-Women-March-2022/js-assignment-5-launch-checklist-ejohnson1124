@@ -48,10 +48,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         alert ("Number required");
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
-    //else{
-    //     pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
-    //     copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
-    // }
+    else{
+        pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
+        copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
+        list.style.visibility="hidden"
+    }
         if (fuelLevel < 10000) {
             launchStatus.innerHTML = "Shuttle Not Ready For Launch"
             fuelStatus.innerHTML = "Fuel level too low for launch"
