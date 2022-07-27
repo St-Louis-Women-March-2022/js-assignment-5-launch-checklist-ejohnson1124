@@ -19,17 +19,17 @@ window.addEventListener("load", function() {
     })
  //25.9.3. Follow Along as We Add Validation adding validations
     let form = document.querySelector("form");
-    form.addEventListener("submit", function(event){
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
         let pilot = document.querySelector("input[name=pilotName]");
         let copilot = document.querySelector("input[name=copilotName]");
         let fuelLevel = document.querySelector("input[name=fuelLevel]");
         let cargoLevel = document.querySelector("input[name=cargoMass]");
-        let list = document.getElementById("faultyList");//putting this here b/c it won't let me on scripthelper
+        let list = document.getElementById("faultyItems");//putting this here b/c it won't let me on scripthelper
         
 
 
-        event.preventDefault();
         //using this to update list
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
        });
