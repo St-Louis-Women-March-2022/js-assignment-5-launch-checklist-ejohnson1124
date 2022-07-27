@@ -31,12 +31,12 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    let launchStatus = document.getElementById("launchStatus");
-    let pilotStatus = document.getElementById("pilotStatus");
-    let copilotStatus = document.getElementById("copilotStatus");
-    let fuelStatus = document.getElementById("fuelStatus");
-    let cargoStatus = document.getElementById("cargoStatus");
-   
+    let pilotStatus = document.getElementById('pilotStatus');
+    let copilotStatus = document.getElementById('copilotStatus');
+    let fuelStatus = document.getElementById('fuelStatus');
+    let cargoStatus = document.getElementById('cargoStatus');
+    let launchStatus = document.getElementById('launchStatus');
+
 //add an alert to notify the user that all fields are required. entered valid info for each of the fields
    if (validateInput(pilot.value) === "Empty" || validateInput(copilot.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoLevel.value) === "Empty") {
     alert ("All fields are required!");
@@ -47,7 +47,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     list.style.visibility = 'hidden';
 
     }
-    else if (validateInput(fuelLevel.value) == "Not a Number" || validateInput(cargoMass.value) == "Not a Number") {
+    else if (validateInput(fuelLevel.value) == "Not a Number" || validateInput(cargoLevel.value) == "Not a Number") {
         alert ("Number required");
         list.style.visibility = 'hidden';
 
