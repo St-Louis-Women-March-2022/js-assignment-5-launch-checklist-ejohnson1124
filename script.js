@@ -32,5 +32,5 @@ window.addEventListener("load", function() {
 
         //using this to update list
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
-       });
+       })
 });
