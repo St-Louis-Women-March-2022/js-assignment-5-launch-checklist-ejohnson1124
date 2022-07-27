@@ -54,8 +54,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     }
        //update the li elements pilotStatus and copilotStatus to include the pilot's name and the co-pilot's name.
     else{
-        pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
-        copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
+        pilotStatus.innerHTML = `Pilot ${pilot.value} is ready for launch`;
+        copilotStatus.innerHTML = `Co-pilot ${copilot.value} is ready for launch`;
     }
         if (fuelLevel.value < 10000) {
             launchStatus.innerHTML = `Shuttle Not Ready For Launch`;
